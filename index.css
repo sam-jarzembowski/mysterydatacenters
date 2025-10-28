@@ -1,0 +1,46 @@
+/* font code */
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Instrument+Serif:ital@0;1&family=STIX+Two+Text:ital,wght@0,400..700;1,400..700&display=swap');
+
+/* colors */
+:root {
+  --bg-color: #EBE4D5;
+  --night-color: #141415;
+  --violet-color: #8A6A87;
+  --blue-color: #55828B;
+  --goldenrod-color: #B27D2E;
+}
+
+
+.container {
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "header" 
+    "navbar";
+
+}
+
+header {
+    text-align: center;
+}
+
+nav {
+    grid-area: navbar;
+    text-align: center;
+}
+
+/* high level styling */
+body {
+    background-color: var(--bg-color);
+
+    font-family: "Figtree", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--night-color);
+}
+
+h1 {
+    font-family: "Instrument Serif", serif;
+    font-weight: 400;
+    font-style: normal;
+}
