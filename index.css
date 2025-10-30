@@ -15,8 +15,7 @@
     grid-template-columns: 1fr;
     grid-template-areas: 
     "header" 
-    "navbar";
-
+    "navvy";
 }
 
 header {
@@ -24,12 +23,15 @@ header {
 }
 
 nav {
-    grid-area: navbar;
+    grid-area: "navvy";
     text-align: center;
 }
 
 /* high level styling */
 body {
+    max-width: 1200px;
+    margin: 0 auto;
+
     background-color: var(--bg-color);
 
     font-family: "Figtree", sans-serif;
@@ -43,4 +45,53 @@ h1 {
     font-family: "Instrument Serif", serif;
     font-weight: 400;
     font-style: normal;
+}
+
+nav ul {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center; 
+    gap: 8px; 
+    padding: 0; 
+    margin: 0;  
+    padding-bottom: 1em;
+}
+
+nav ul li {
+    list-style: none;
+    margin: 0;
+}
+
+nav a {
+    display: inline-block;
+    padding: 6px 10px; 
+    text-decoration: none;
+    color: inherit;
+}
+
+.left {
+    background-color: white;
+    width: auto;
+    height: 300px;
+    grid-area: lefty;
+}
+
+.center {
+    background-color: black;
+    width: auto;
+    height: 300px;
+    grid-area: centy;
+}
+
+.right {
+    background-color: white;
+    width: auto;
+    height: 300px;
+    grid-area: righty;
+}
+
+.articles {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-areas: "lefty centy righty"; 
 }
