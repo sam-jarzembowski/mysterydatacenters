@@ -1,0 +1,20 @@
+h2 {
+  font-family: "STIX Two Text", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+
+  text-align: center;
+}
+
+.destination {
+    align-items: center;
+}
+
+.destImg {
+    display: block;      
+    margin: 0 auto;      
+    width: 100%;         
+    max-width: none;     
+    height: auto;        
+    object-fit: contain; 
+}
