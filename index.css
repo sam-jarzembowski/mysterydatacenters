@@ -97,3 +97,7 @@ nav a {
     grid-template-columns: 1fr 2fr 1fr;
     grid-template-areas: "lefty centy righty"; 
 }
+
+.destination-list a {
+    text-align: center;
+}
