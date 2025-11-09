@@ -71,6 +71,12 @@ nav a {
     color: inherit;
 }
 
+nav a:hover {
+    background-color: var(--goldenrod-color);
+    color: white;
+    border-radius: 4px;
+}
+
 .left {
     background-color: white;
     width: auto;
@@ -98,8 +104,32 @@ nav a {
     grid-template-areas: "lefty centy righty"; 
 }
 
-.destination-list a {
-    text-align: center;
+#destination-list {
+  list-style: none;    
+  padding: 0;            
+  margin: 1.0rem auto;   
+  display: flex;
+  flex-direction: column; 
+  align-items: center;    
+  gap: 0.5rem;           
+  text-align: center;     
+  max-width: 100%;       
+}
+
+#destination-list li {
+  margin: 0;
+  padding: 0;
+  width: auto;        
+}
+
+#destination-list a {
+  text-decoration: none; 
+  color: inherit;
+}
+
+#destination-list a:hover {
+  text-decoration: underline;
+  color: var(--goldenrod-color)
 }
 
 footer {
