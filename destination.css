@@ -18,3 +18,13 @@ h2 {
     height: auto;        
     object-fit: contain; 
 }
+
+.attractionImg {
+    display: block;      
+    margin: 0 auto; 
+    padding-top: 2em;     
+    width: 100%;         
+    max-width: none;     
+    height: auto;        
+    object-fit: contain; 
+}
