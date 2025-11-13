@@ -1,0 +1,32 @@
+/* store grid: 4 items per row on large screens, responsive down */
+.store-items {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columns */
+  gap: 1rem;                              /* spacing between items */
+  align-items: start;
+  margin: 1.5rem 0;
+}
+
+/* Make each image fill its grid cell without overflowing */
+.store-items img {
+  display: block;
+  width: 100%;
+  height: auto;         /* preserve aspect ratio */
+  object-fit: contain;  /* show whole image (no cropping) */
+  border-radius: 6px;
+  background-color: #fff; /* optional: helps images with transparent bg */
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+}
+
+/* Responsive breakpoints: adjust columns on smaller screens */
+@media (max-width: 1100px) {
+  .store-items { grid-template-columns: repeat(3, 1fr); } /* 3 cols */
+}
+
+@media (max-width: 720px) {
+  .store-items { grid-template-columns: repeat(2, 1fr); } /* 2 cols */
+}
+
+@media (max-width: 420px) {
+  .store-items { grid-template-columns: 1fr; } /* 1 col for narrow phones */
+}
