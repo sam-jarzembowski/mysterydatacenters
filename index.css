@@ -80,28 +80,102 @@ nav a:hover {
 .left {
     background-color: white;
     width: auto;
-    height: 300px;
     grid-area: lefty;
 }
 
 .center {
     background-color: black;
     width: auto;
-    height: 300px;
     grid-area: centy;
 }
 
 .right {
     background-color: white;
     width: auto;
-    height: 300px;
     grid-area: righty;
 }
 
+/* Featured article cards (responsive) */
+
 .articles {
-    display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
-    grid-template-areas: "lefty centy righty"; 
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-areas: "lefty centy righty";
+  gap: 1rem;
+  align-items: start;
+}
+
+/* allow columns to size by content and remove fixed heights */
+.left, .center, .right {
+  background: transparent; /* let cards define background */
+  height: auto;            /* override previous fixed heights */
+  padding: 0;
+}
+
+/* card styling */
+.article-card {
+  /* background: #ffffff; */
+  /* border-radius: 10px; */
+  padding: 1rem;
+  /* box-shadow: 0 6px 18px rgba(12,17,20,0.06); */
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+/* optional emphasis for center card
+.article-card.featured {
+  /* transform: translateY(-6px); */
+  /* box-shadow: 0 10px 30px rgba(12,17,20,0.09); */
+
+/* image styling: responsive and keeps aspect ratio */
+.article-img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  aspect-ratio: 16 / 9; /* keeps a uniform thumbnail height */
+  background-color: #f6f6f6; /* shows while image loads */
+}
+
+/* text */
+.article-card h3 {
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.2;
+  font-weight: 600;
+}
+
+.article-excerpt {
+  margin: 0;
+  color: #333;
+  font-size: 0.95rem;
+}
+
+/* read more link */
+.read-more {
+  margin-top: auto; /* push link to bottom of card */
+  align-self: flex-start;
+  text-decoration: none;
+  color: var(--blue-color);
+  font-weight: 600;
+}
+
+.read-more:hover {
+    text-decoration: underline;
+    color: var(--goldenrod-color);
+}
+
+/* Responsive: stack columns on small screens */
+@media (max-width: 880px) {
+  .articles {
+    grid-template-columns: 1fr; /* stack */
+    grid-template-areas:
+      "centy"
+      "lefty"
+      "righty";
+  }
+  .article-card.featured { transform: none; }
 }
 
 #destination-list {
