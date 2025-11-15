@@ -123,11 +123,6 @@ nav a:hover {
   gap: 0.75rem;
 }
 
-/* optional emphasis for center card
-.article-card.featured {
-  /* transform: translateY(-6px); */
-  /* box-shadow: 0 10px 30px rgba(12,17,20,0.09); */
-
 /* image styling: responsive and keeps aspect ratio */
 .article-img {
   width: 100%;
@@ -136,6 +131,15 @@ nav a:hover {
   object-fit: cover;
   aspect-ratio: 16 / 9; /* keeps a uniform thumbnail height */
   background-color: #f6f6f6; /* shows while image loads */
+}
+
+.ad-img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  aspect-ratio: 10 / 9; 
+  background-color: #f6f6f6; 
 }
 
 /* text */
