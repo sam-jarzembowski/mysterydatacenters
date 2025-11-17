@@ -9,18 +9,23 @@
 </head>
 <body>
     <div class="container">
-        <header>
+       <header>
             <h1>Mystery Data Centers</h1>
+            <button class="nav-toggle" aria-controls="nav-menu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="hamburger" aria-hidden="true"></span>
+            </button>
         </header>
 
-       <nav>
-            <ul>
-                <li><a href="/index.html">Featured</a></li>
-                <li><a href="https://modern-zone-96344941.figma.site/">Map</a></li>
-                <li><a href="/destinations.html">Destinations</a></li>
-                <li><a href="/store.html">Store</a></li>
-                <li><a href="/about.html">About</a></li>
-            </ul>
+        <nav>
+            <div id="nav-menu" class="nav-menu">
+                <ul>
+                    <li><a href="/index.html">Featured</a></li>
+                    <li><a href="https://modern-zone-96344941.figma.site/">Map</a></li>
+                    <li><a href="/destinations.html">Destinations</a></li>
+                    <li><a href="/store.html">Store</a></li>
+                    <li><a href="/about.html">About</a></li>
+                </ul>
+            </div>
         </nav>
 
         <div class="destination">
@@ -59,6 +64,6 @@
 
     </div>
 
-
+    <script src="/nav.js"></script>
 </body>
 </html>
